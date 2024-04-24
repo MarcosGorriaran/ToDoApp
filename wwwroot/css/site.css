@@ -20,3 +20,12 @@ html {
 body {
   margin-bottom: 60px;
 }
+table td, table th{
+    padding:10px;
+    border-color:black;
+    border-style:solid;
+}
+table th{
+    background-color:black;
+    color:white;
+}

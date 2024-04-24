@@ -1,4 +1,5 @@
 ﻿@page
+@using ToDoApp.Model
 @model IndexModel
 @{
     ViewData["Title"] = "Home page";
@@ -8,3 +9,28 @@
     <h1 class="display-4">Welcome</h1>
     <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
 </div>
+<table class="text-center">
+    <tr>
+        <th>Prioridad</th>
+        <th>Fecha de creacion</th>
+        <th>Descripcion</th>
+        <th>Completado</th>
+    </tr>
+    @foreach(ToDo element in Model.toDo)
+    {
+        {<tr>
+            <td>
+                @element.GetNamePriority();
+            </td>
+            <td>
+                @element.CreationDate;
+            </td>
+            <td>
+                @element.Description;
+            </td>
+            <td>
+                @element.Completed;
+            </td>
+        </tr>}
+    }
+</table>
